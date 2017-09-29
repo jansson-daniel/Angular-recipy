@@ -7,8 +7,8 @@ import {Recipe} from '../recipe.model';
   styleUrls: ['./recipe-list.component.css']
 })
 export class RecipeListComponent implements OnInit {
-  recipies: Recipe[] = [
-    new Recipe('pankakor', 'recept för pannkakor', 'http://www.pancaces.com')
+  recipes: Recipe[] = [
+    new Recipe('pankakor', 'recept för pannkakor', 'http://foodelicious.se/wp-content/gallery/galleri-1/2012-01-02.jpg')
   ];
 
   constructor() { }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, ElementRef, EventEmitter, Output, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -7,5 +7,15 @@ import { Component } from '@angular/core';
 })
 
 export class HeaderComponent {
+  @ViewChild('menuItem') menuItem: ElementRef;
+  @Output() selectedItem = new EventEmitter<{ category: 'string' }>();
 
+
+  constructor () {
+
+  }
+
+  onMenuSelected () {
+    console.log(this.menuItem.nativeElement);
+  }
 }
