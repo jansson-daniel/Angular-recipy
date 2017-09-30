@@ -8,4 +8,12 @@ import { Component } from '@angular/core';
 export class AppComponent {
   showCategory = 'recipe';
 
+  constructor () {
+
+  }
+
+  onSelectedItem (event) {
+    this.showCategory = event.category;
+  }
+
 }

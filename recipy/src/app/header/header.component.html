@@ -5,8 +5,8 @@
     </div>
     <div class="collape navbar-collapse">
       <ul class="nav navbar-nav">
-        <li><a #menuItem (click)="onMenuSelected()" href="#">Recipies</a></li>
-        <li><a #menuItem (click)="onMenuSelected()" href="#" class="shopping-list">Shopping-list</a></li>
+        <li><a id="recipe" #recipeMenuItem (click)="onMenuSelected($event)" href="#">Recipies</a></li>
+        <li><a id="shopping-list" #shoppingListMenuItem (click)="onMenuSelected($event)" href="#" class="shopping-list">Shopping-list</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown">

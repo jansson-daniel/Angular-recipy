@@ -7,15 +7,16 @@ import {Component, ElementRef, EventEmitter, Output, ViewChild} from '@angular/c
 })
 
 export class HeaderComponent {
-  @ViewChild('menuItem') menuItem: ElementRef;
-  @Output() selectedItem = new EventEmitter<{ category: 'string' }>();
-
+  @Output() selectedItem = new EventEmitter<{ category: string }>();
+  @ViewChild('recipeMenuItem') recipeMenuItem: ElementRef;
+  @ViewChild('shoppingListMenuItem') shoppingListMenuItem: ElementRef;
 
   constructor () {
 
   }
 
-  onMenuSelected () {
-    console.log(this.menuItem.nativeElement);
+  onMenuSelected (event: Event) {
+    event.preventDefault();
+    this.selectedItem.emit({ category: (<HTMLAnchorElement> event.target).id });
   }
 }

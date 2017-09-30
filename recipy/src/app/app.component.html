@@ -1,4 +1,4 @@
-<app-header></app-header>
+<app-header (selectedItem)="onSelectedItem($event)"></app-header>
 <div class="container">
   <div class="row">
     <div *ngIf="showCategory === 'recipe'" class="col-md-12">
